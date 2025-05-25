@@ -55,3 +55,31 @@ const cards = [
     price: "$21.00",
   },
 ];
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggleIcon");
+  const menuClose = document.getElementById("menuClose");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuToggle.addEventListener("click", function () {
+    mobileMenu.classList.add("active");
+    menuToggle.style.display = "none";
+    menuClose.style.display = "block";
+    document.body.style.overflow = "hidden";
+  });
+
+  menuClose.addEventListener("click", function () {
+    mobileMenu.classList.remove("active");
+    menuClose.style.display = "none";
+    menuToggle.style.display = "block";
+    document.body.style.overflow = "auto";
+  });
+
+  const menuLinks = document.querySelectorAll(".mobile-menu__links a");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      mobileMenu.classList.remove("active");
+      document.body.style.overflow = "auto";
+    });
+  });
+});

@@ -166,6 +166,9 @@ a {
 /* START: header media querie */
 @media screen and (max-width: 900px) {
   .header__nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
     background: var(--primary-color);
   }
 
@@ -288,7 +291,7 @@ a {
     flex-direction: column;
   }
 
-  .trending-drink {
+  .trending-drinks {
     flex-direction: column-reverse;
   }
 

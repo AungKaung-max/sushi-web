@@ -60,6 +60,7 @@
   gap: 20px;
   position: relative;
   cursor: pointer;
+  z-index: 3000;
 }
 
 .mobile-menu__overlay {
@@ -84,15 +85,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-}
-
-.mobile-menu__close {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-
-  cursor: pointer;
-  color: #fff;
 }
 
 .mobile-menu__links {

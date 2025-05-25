@@ -58,29 +58,18 @@ const cards = [
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menuToggleIcon");
-  const menuClose = document.getElementById("menuClose");
+
   const mobileMenu = document.getElementById("mobileMenu");
 
   menuToggle.addEventListener("click", function () {
-    mobileMenu.classList.add("active");
-    menuToggle.style.display = "none";
-    menuClose.style.display = "block";
-    document.body.style.overflow = "hidden";
-  });
-
-  menuClose.addEventListener("click", function () {
-    mobileMenu.classList.remove("active");
-    menuToggle.style.display = "block";
-    menuClose.style.display = "none";
-    document.body.style.overflow = "auto";
+    let isActive = mobileMenu.classList.toggle("active");
+    document.body.style.overflow = isActive ? "hidden" : "auto";
   });
 
   const menuLinks = document.querySelectorAll(".mobile-menu__links a");
   menuLinks.forEach((link) => {
     link.addEventListener("click", function () {
       mobileMenu.classList.remove("active");
-      menuToggle.style.display = "block";
-      menuClose.style.display = "none";
       document.body.style.overflow = "auto";
     });
   });

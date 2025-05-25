@@ -59,6 +59,7 @@
   display: none;
   gap: 20px;
   position: relative;
+  cursor: pointer;
 }
 
 .mobile-menu__overlay {
@@ -87,10 +88,9 @@
 
 .mobile-menu__close {
   position: absolute;
-  top: 22px;
-  right: 20px;
-  width: 24px;
-  height: 24px;
+  top: 25px;
+  right: 30px;
+
   cursor: pointer;
   color: #fff;
 }
@@ -100,7 +100,6 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  margin-top: 80px;
   list-style: none;
 }
 

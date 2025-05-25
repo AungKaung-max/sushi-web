@@ -70,8 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuClose.addEventListener("click", function () {
     mobileMenu.classList.remove("active");
-    menuClose.style.display = "none";
     menuToggle.style.display = "block";
+    menuClose.style.display = "none";
     document.body.style.overflow = "auto";
   });
 
@@ -79,6 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
   menuLinks.forEach((link) => {
     link.addEventListener("click", function () {
       mobileMenu.classList.remove("active");
+      menuToggle.style.display = "block";
+      menuClose.style.display = "none";
       document.body.style.overflow = "auto";
     });
   });
